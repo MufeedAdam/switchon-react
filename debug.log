@@ -1,0 +1,7 @@
+[0604/011208.213:ERROR:process_info.cc(359)] UncheckedAllocate
+[0604/132701.124:ERROR:process_info.cc(359)] UncheckedAllocate
+[0604/150639.376:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Mufeed\AppData\Local\Google\Chrome\User Data\Crashpad\reports\0af24bd2-d305-4db9-b680-289af652a8e8.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0604/150643.206:ERROR:process_info.cc(359)] UncheckedAllocate
+[0604/191102.764:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Mufeed\AppData\Local\Google\Chrome\User Data\Crashpad\reports\43d88f52-c685-4e59-983b-e9b67b5a8ab2.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0604/191102.776:ERROR:process_info.cc(359)] UncheckedAllocate
+[0605/095840.890:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
