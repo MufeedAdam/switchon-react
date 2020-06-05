@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import socketIOClient from "socket.io-client";
-const ENDPOINT = "http://127.0.0.1:3001";
+const ENDPOINT = "https://switchon-node.herokuapp.com/";
 function Request(){
   const [result, setResult] = useState([]);
   const [load, setLoad] = useState(null);
@@ -15,7 +15,7 @@ function Request(){
     
  
     console.log(localStorage.getItem('myValueInLocalStorage'))
-    axios.post('http://localhost:3001/tasks/getByName',  body,{
+    axios.post('https://switchon-node.herokuapp.com/tasks/getByName',  body,{
     headers: {
       xaccesstoken:localStorage.getItem('myValueInLocalStorage')
     }
@@ -47,7 +47,7 @@ function Request(){
     }
     
       
-    axios.post('http://localhost:3001/tasks/update',  body,{
+    axios.post('https://switchon-node.herokuapp.com/tasks/update',  body,{
       headers: {
         xaccesstoken:localStorage.getItem('myValueInLocalStorage')
       }
@@ -78,7 +78,7 @@ function Request(){
     }
     
       
-    axios.post('http://localhost:3001/tasks/update',  body,{
+    axios.post('https://switchon-node.herokuapp.com/tasks/update',  body,{
       headers: {
         xaccesstoken:localStorage.getItem('myValueInLocalStorage')
       }

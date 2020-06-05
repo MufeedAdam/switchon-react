@@ -13,7 +13,7 @@ function Rejected(){
     
  
     console.log(localStorage.getItem('myValueInLocalStorage'))
-    axios.post('http://localhost:3001/tasks/getByRejected',  body,{
+    axios.post('https://switchon-node.herokuapp.com/tasks/getByRejected',  body,{
     headers: {
       xaccesstoken:localStorage.getItem('myValueInLocalStorage')
     }

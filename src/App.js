@@ -85,7 +85,7 @@ useEffect(() => {
       ContentType: 'application',
       Accept: 'application/json'
     };
-    axios.post('http://localhost:3001/users/register',  body,header)
+    axios.post('https://switchon-node.herokuapp.com//users/register',  body,header)
     .then(function (response) {
       console.log(response);
       alert(response.data.message)
@@ -110,7 +110,7 @@ useEffect(() => {
       ContentType: 'application',
       Accept: 'application/json'
     };
-    axios.post('http://localhost:3001/users/authenticate',  body,header)
+    axios.post('https://switchon-node.herokuapp.com/users/authenticate',  body,header)
     .then(function (response) {
       
      alert(response.data.message)

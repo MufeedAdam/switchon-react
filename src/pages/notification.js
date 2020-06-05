@@ -14,7 +14,7 @@ function Notification(){
     
  
     console.log(localStorage.getItem('myValueInLocalStorage'))
-    axios.post('http://localhost:3001/tasks/getByDepartment',  body,{
+    axios.post('https://switchon-node.herokuapp.com/tasks/getByDepartment',  body,{
     headers: {
       xaccesstoken:localStorage.getItem('myValueInLocalStorage')
     }

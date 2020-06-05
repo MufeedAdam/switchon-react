@@ -17,7 +17,7 @@ import socketIOClient from "socket.io-client";
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
-const ENDPOINT = "http://127.0.0.1:3001";
+const ENDPOINT = "https://switchon-node.herokuapp.com/";
 
 function Home(props) {
 
@@ -87,7 +87,7 @@ socket.on('task',function(data) {
       
       <MDBNavbar color="unique-color-dark" style={{ marginTop: "20px" }} dark>
         <MDBNavbarBrand href="#">
-          <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="" />
+          <img src="https://media-exp1.licdn.com/dms/image/C510BAQEvWNU4BIQeJw/company-logo_200_200/0?e=2159024400&v=beta&t=V0WMKGQRNeM4cnDkZWljBB5BouLNECDhKKaz3ssmHwg" height="30" alt="" />
         </MDBNavbarBrand>
       
             

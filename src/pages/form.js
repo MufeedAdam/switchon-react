@@ -9,7 +9,7 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import socketIOClient from "socket.io-client";
 import '../table.css';
-const ENDPOINT = "http://127.0.0.1:3001";
+const ENDPOINT = "https://switchon-node.herokuapp.com/";
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
@@ -60,7 +60,7 @@ export default function FormPropsTextFields() {
             ContentType: 'application',
             Accept: 'application/json'
           };
-          axios.get('http://localhost:3001/users/getUser',  header)
+          axios.get('https://switchon-node.herokuapp.com/users/getUser',  header)
           .then(function (response) {
             console.log(response);
             employee.push(response.data.data.movies)
@@ -115,7 +115,7 @@ function handleClick(e){
   }
   console.log(body)
     
-  axios.post('http://localhost:3001/tasks/',  body,{
+  axios.post('https://switchon-node.herokuapp.com/tasks/',  body,{
     headers: {
       xaccesstoken:localStorage.getItem('myValueInLocalStorage')
     }
