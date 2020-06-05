@@ -10,6 +10,7 @@ import axios from 'axios';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import Particles from 'react-particles-js';
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
@@ -112,7 +113,7 @@ useEffect(() => {
     axios.post('http://localhost:3001/users/authenticate',  body,header)
     .then(function (response) {
       
-     
+     alert(response.data.message)
      console.log(response.data.data)
    
     localStorage.setItem('myValueInLocalStorage', response.data.data.token);
@@ -140,11 +141,26 @@ useEffect(() => {
   return (
     
     <div className="App">
-    <div>
-      
     
-    </div>
       <header className="App-header">
+      <Particles 
+      params={{
+            		particles: {
+            			line_linked: {
+            				shadow: {
+            					enable: true,
+            					color: "#3CA9D1",
+            					blur: 1
+            				}
+            			}
+            		}
+            	}}
+              style={{
+                width: '200' 
+              }}
+              />
+        <h1>TASK IT</h1>
+        <hr></hr>
       <MDBContainer>
   <MDBRow>
     <MDBCol md="6">

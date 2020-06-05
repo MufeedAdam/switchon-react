@@ -89,31 +89,25 @@ socket.on('task',function(data) {
         <MDBNavbarBrand href="#">
           <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="" />
         </MDBNavbarBrand>
-        <MDBNavbarNav left>
-            <MDBNavItem >
+      
+            
               <Link to='/home'>Form</Link>
-            </MDBNavItem>
-            <MDBNavItem>
+           
               <Link to='/pending'>Pending</Link>
-            </MDBNavItem>
-            <MDBNavItem>
+            
               <Link to='/approved'>Approved</Link>
-            </MDBNavItem>
-            <MDBNavItem>
+            
             <Link to='/request'>Request</Link>
-            </MDBNavItem>
-            <MDBNavItem>
+           
               <Link to='/rejected'>Rejected</Link>
-            </MDBNavItem>
-            <MDBNavItem>
+            
             <Link to='/notification'>History</Link>
-            </MDBNavItem>
-            </MDBNavbarNav>
-            <MDBNavbarNav left>
-            <MDBNavItem>
+            
+            
+            
             <input type="button" onClick={handleLogout} value="Logout" />
-            </MDBNavItem>
-          </MDBNavbarNav>
+            
+          
       </MDBNavbar>
       <p>
       

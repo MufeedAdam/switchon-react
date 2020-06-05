@@ -99,24 +99,45 @@ function Request(){
 
 
 const renderTable = () => {
-  return result.map(user => {
-    return (
+  if(result.length){
+    console.log("Hello")
+    return result.map(user => {
+      return (
+        <tr>
+          <td>{user.date_on}</td>
+          <td>{user.name_from}</td>
+          <td>{user.department_from}</td>
+          <td>{user.task}</td>
+          <button onClick={(e) => onApprove(e,user.id,user.department_from,user.name_from,user.task)}>Approve</button>
+          <button onClick={(e) => onReject(e,user.id,user.department_from,user.name_from,user.task)}>Reject</button>
+          </tr>
+      )
+    })
+  }
+
+  else{
+   console.log("Hello")
+    return(
       <tr>
-        <td>{user.date_on}</td>
-        <td>{user.name_from}</td>
-        <td>{user.department_from}</td>
-        <td>{user.task}</td>
-        <button onClick={(e) => onApprove(e,user.id,user.department_from,user.name_from,user.task)}>Approve</button>
-        <button onClick={(e) => onReject(e,user.id,user.department_from,user.name_from,user.task)}>Reject</button>
-        </tr>
+      <td>no data</td>
+      <td>no data</td>
+      <td>no data</td>
+      <td>no data</td>
+
+</tr>
     )
-  })
+   
+  }
+  
+  
+  
 }
 
     return(
       <div>
     
       <h1 id="title">Request Table</h1>
+      <div class="container">
       <table id="users"> 
         <thead>
           <tr>
@@ -129,6 +150,7 @@ const renderTable = () => {
         </thead>
         <tbody>{renderTable()}</tbody>
       </table>
+      </div>
     </div>
     )
 }

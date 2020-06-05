@@ -8,6 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import socketIOClient from "socket.io-client";
+import '../table.css';
 const ENDPOINT = "http://127.0.0.1:3001";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -135,6 +136,7 @@ function handleClick(e){
   return (
 
     <React.Fragment>
+    <div class="container">
       <CssBaseline />
       <Container maxWidth="sm">
       
@@ -143,7 +145,7 @@ function handleClick(e){
         <form className={classes.root} noValidate autoComplete="off">
       <div>
       
-        <TextField required  id="standard-required" label=" Task" defaultValue="Write your Task" onChange={e => setTask(e.target.value)}/>
+        <TextField required  id="standard-required" label=" Task" helperText="Write your task here"  onChange={e => setTask(e.target.value)}/>
 
       </div>
       <div>
@@ -189,6 +191,7 @@ function handleClick(e){
       </Typography>
     
       </Container>
+      </div>
     </React.Fragment>
    
   );
