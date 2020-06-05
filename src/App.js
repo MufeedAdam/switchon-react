@@ -85,7 +85,7 @@ useEffect(() => {
       ContentType: 'application',
       Accept: 'application/json'
     };
-    axios.post('https://switchon-node.herokuapp.com//users/register',  body,header)
+    axios.post('https://switchon-node.herokuapp.com/users/register',  body,header)
     .then(function (response) {
       console.log(response);
       alert(response.data.message)
